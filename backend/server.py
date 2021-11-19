@@ -12,10 +12,6 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 def render_vue(path):
     return render_template('index.html')
 
-#@app.route('/about')
-#def about():
-#    return 'This is the about endpoint'
-
 @app.route('/api/v1.0/message')
 def message():
     return jsonify('Nuevo mensaje desde el backend')

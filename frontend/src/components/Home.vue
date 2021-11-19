@@ -1,6 +1,7 @@
 <template lang="html">
     <div class="body">
-        <h1> {{ message }} </h1>
+        <div class="text-5xl bg-blue-500"> Hola mundo </div>
+        <div class="bg-purple-500 text-white"> Test </div>
     </div>
 </template>
 
