@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-_pycache_/
+__pycache__/
 *.py[cod]
 *$py.class
 
@@ -8,7 +8,6 @@ _pycache_/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -92,7 +91,7 @@ ipython_config.py
 #Pipfile.lock
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
-_pypackages_/
+__pypackages__/
 
 # Celery stuff
 celerybeat-schedule
@@ -184,6 +183,10 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
 
 # Optional npm cache directory
 .npm
