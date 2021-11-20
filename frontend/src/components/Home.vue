@@ -8,7 +8,7 @@
                     Guía de precio de carros usados
                     </label>
                 </div>
-                <div class="pt-14">
+                <div class="pt-12">
                     <label class="text-xl font-semibold">
                         Ingrese información del vehículo:
                     </label>
@@ -97,8 +97,8 @@
                     </div>
                 </div>        
                 <!-- rotating car gif -->
-                <div class="w-full flex flex-col justify-center lg:ml-5 lg:px-5">
-                    <img id="carImg" @click="changeCarImg" src="../assets/rotating_car_1.gif" :alt="img_src">
+                <div class="w-full flex flex-col justify-center lg:ml-10">
+                    <img @click="changeCarImg" id="carImg" src="https://drive.google.com/uc?export=view&id=1Qaoqn1xozn2kNRSFYsKiSNtdezcN-L_-" />
                 </div>
             </div>
             <!-- Footer -->
@@ -123,28 +123,26 @@ export default {
       motor: "",
       transmission: "",
       price: "",
-      img_src: "../assets/rotating_car_1.gif",
-      img_count: 1,
+      img_count: 0,
+      cars_imgs: [
+        "https://drive.google.com/uc?export=view&id=1Qaoqn1xozn2kNRSFYsKiSNtdezcN-L_-",
+        "https://drive.google.com/uc?export=view&id=1y0PZkQ5PNdlax_51j-VbvW_re7a11cb_",
+        "https://drive.google.com/uc?export=view&id=15QEtVDUfzi-APJzbY6hCPG3SHZn4ZUSa",
+        "https://drive.google.com/uc?export=view&id=1TA8lquwfZCObw6woYEFfEygd77u4z4-W",
+        "https://drive.google.com/uc?export=view&id=1jeUZzbC1W8ZKJGGUjSbdVcqTt3r0GLTT",
+        "https://drive.google.com/uc?export=view&id=1sQAC2_PGJlG3cha_LV1k1rB9l5leqBQK",
+        "https://drive.google.com/uc?export=view&id=16ix8mPDheXOnFm3G0DAFSBks8rLal5m1",
+      ],
     };
   },
   methods: {
     changeCarImg() {
-      if (this.img_count == 7) {
-        this.img_src = this.img_src.replace(
-          this.img_count.toString(),
-          (1).toString()
-        );
-        document.getElementById("carImg").src = this.img_src;
-        this.img_count = 1;
+      if (this.img_count == 6) {
+        this.img_count = 0;
+        document.getElementById("carImg").src = this.cars_imgs[this.img_count];
       } else {
-        console.log(document.getElementById("carImg").src);
-        this.img_src = this.img_src.replace(
-          this.img_count.toString(),
-          (this.img_count + 1).toString()
-        );
-        document.getElementById("carImg").src = this.img_src;
-        console.log(document.getElementById("carImg").src);
         this.img_count += 1;
+        document.getElementById("carImg").src = this.cars_imgs[this.img_count];
       }
     },
     estimateCarPrice() {
@@ -172,6 +170,8 @@ export default {
       this.kilometers = "";
       this.motor = "";
       this.transmission = "";
+
+      this.changeCarImg();
     },
   },
   created() {},
