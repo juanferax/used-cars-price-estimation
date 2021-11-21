@@ -2,7 +2,7 @@
     <div class=" w-full bg-backgroundColor">
         <main class="min-h-screen">
             <!-- Header -->
-            <div id="header" class="mx-5 pt-5">
+            <div id="header" class="w-full">
                 <div class="pt-5 flex flex-col justify-center rounded-xl">
                    <img id="headImg" src="https://64.media.tumblr.com/36967d731108d643d9b74bb3c5d2b5e1/747e52494a39b5da-e4/s1280x1920/b9b00fbfeb83f513fe3d09634c9dda906d7b3198.gifv"/>
     
